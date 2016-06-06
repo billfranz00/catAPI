@@ -1,0 +1,17 @@
+* {
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	margin: 20px auto;
+}
+
+form {
+	text-align: center;
+}
+
+a {
+	margin-top: 10px;
+	text-align: center;
+}
