@@ -1,12 +1,13 @@
 function getInfo() {
 	var token = 'OTM3MTk',
 		value = this.value
-		console.log(value)
+	console.log(value)
 	$.ajax({
 		url: 'http://thecatapi.com/api/images/get?format=html&results_per_page=20',
 		dataType: "html",
 		success: function(stuff) {
 			// console.log(stuff)
+			document.getElementById('placement').innerHTML = ""
 			var data = $.parseHTML(stuff)
 			for(i = 0; i < data.length; i++) {
 				if(data[i].nodeName == '#text') {
@@ -20,7 +21,6 @@ function getInfo() {
 					a = data[i]
 
 				a.childNodes[0].attributes.className = 'img-responsive'
-				a.setAttribute
 
 				div.setAttribute('class', 'col-md-4 col-sm-4')
 				div.appendChild(a)
@@ -34,7 +34,6 @@ function getInfo() {
 
 window.onload = function() {
 	var buttons = document.getElementsByClassName('btn')
-	console.log(buttons)
 	for(i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', getInfo, this)
 	}
