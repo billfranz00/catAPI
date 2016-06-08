@@ -3,17 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<title>Crazy Cat API</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	
+	<!-- My Styling -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
 
 <h1>Cat's are the SHIT!!!!</h1>
 
 <form>
-	<button type='button' id="getInfo">Get Info</button>
+	<div class="form-group">
+		<h3>How many cats you want to see...?</h3>
+		<button type="button" class="btn btn-primary" value="1">Uno Gato</button>
+		<button type="button" class="btn btn-default" value="2">Dos Gatos</button>
+		<button type="button" class="btn btn-danger" value="3">Tres Cats</button>
+		<button type="button" class="btn btn-warning" value="20">A Bazillion Cats!!!</button>	
+	</div>
 </form>
 
-<div id="placement"></div>
+<div class="container">
+	<div class="row" id="placement"></div>
+</div>
 
 
 
@@ -24,6 +41,10 @@
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- My JavaScript File -->
 <script type="text/javascript" src="js/main.js"></script>
 
 

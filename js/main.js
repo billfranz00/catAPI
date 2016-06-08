@@ -1,5 +1,7 @@
 function getInfo() {
-	var token = 'OTM3MTk'
+	var token = 'OTM3MTk',
+		value = this.value
+		console.log(value)
 	$.ajax({
 		url: 'http://thecatapi.com/api/images/get?format=html&results_per_page=20',
 		dataType: "html",
@@ -12,10 +14,28 @@ function getInfo() {
 				}
 			}
 			console.log(data)
-			document.getElementById('placement').appendChild(data[0])
+			console.log(data[0].childNodes[0])
+			for(i = 0; i < value; i++) {
+				var div = document.createElement('div'),
+					a = data[i]
+
+				a.childNodes[0].attributes.className = 'img-responsive'
+				a.setAttribute
+
+				div.setAttribute('class', 'col-md-4 col-sm-4')
+				div.appendChild(a)
+
+				document.getElementById('placement').appendChild(div)
+			}
 		},
 		type: 'GET'
 	})
 }
 
-document.getElementById('getInfo').addEventListener('click', getInfo)
+window.onload = function() {
+	var buttons = document.getElementsByClassName('btn')
+	console.log(buttons)
+	for(i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', getInfo, this)
+	}
+}
