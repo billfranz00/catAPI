@@ -20,9 +20,12 @@ function getInfo() {
 				var div = document.createElement('div'),
 					a = data[i]
 
-				a.childNodes[0].attributes.className = 'img-responsive'
+				a.childNodes[0].className = 'img-responsive img-circle'
+				//a.setAttribute('class', 'animated bounce infinite')
 
-				div.setAttribute('class', 'col-md-4 col-sm-4')
+				div.setAttribute('class', 'col-md-4 col-sm-4 animated bounceInDown')
+				div.addEventListener('mouseover', rubberBandMan, this)
+				div.addEventListener('mouseout', removeClass, this)
 				div.appendChild(a)
 
 				document.getElementById('placement').appendChild(div)
@@ -37,4 +40,12 @@ window.onload = function() {
 	for(i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', getInfo, this)
 	}
+}
+
+function rubberBandMan() {
+	this.setAttribute('class', 'col-md-4 col-sm-4 animated rubberBand')
+}
+
+function removeClass() {
+	this.setAttribute('class', 'col-md-4 col-sm-4')
 }
