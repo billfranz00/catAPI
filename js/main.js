@@ -6,7 +6,7 @@ function getInfo() {
 		url: 'http://thecatapi.com/api/images/get?format=html&results_per_page=20',
 		dataType: "html",
 		success: function(stuff) {
-			// console.log(stuff)
+			console.log(stuff)
 			document.getElementById('placement').innerHTML = ""
 			var data = $.parseHTML(stuff)
 			for(i = 0; i < data.length; i++) {
